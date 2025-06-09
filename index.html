@@ -3,9 +3,275 @@
 <head>
   <meta charset="UTF-8">
   <title>My Personal Site</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add this CSS for the hide-hero class to smoothly transition the hero card */
+    .hide-hero {
+      transition: opacity 0.5s ease, height 0.5s ease;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <header class="bg-light-yellow py-3">
+    <div class="container">
+      <div class="d-flex justify-content-end mb-2 social-links-top">
+        <a href="https://www.linkedin.com/in/mikkael-dumancas-48189b290/" target="_blank" aria-label="LinkedIn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/1200px-LinkedIn_icon_circle.svg.png" alt="LinkedIn" class="icon-img">
+        </a>
+        <a href="https://github.com/oph4lia" target="_blank" aria-label="GitHub">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="icon-img">
+        </a>
+        <a href="https://open.spotify.com/playlist/6VMInSo4towKQYdmBvUIzk?si=bce7b49f13134904" target="_blank" aria-label="Spotify">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1200px-Spotify_icon.svg.png" alt="Spotify" class="icon-img">
+        </a>
+        <!-- Removed the email button from social links -->
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand fw-bold" href="#" style="color: #FFD600;">Mikkael Dumancas</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Removed the hero card from the header -->
+    </div>
+  </header>
+
+  <!-- Hero card moved here, outside the header -->
+  <div id="heroCard" class="card hero-card mt-3 mb-2 mx-auto text-center p-4" style="max-width: 600px;">
+    <!-- Headshot image -->
+    <img 
+      src="img/IMG_7468.jpg" 
+      alt="Headshot" 
+      class="headshot mb-2 d-block mx-auto" 
+      style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover;"
+    >
+    <!-- Tagline text -->
+    <p class="tagline mb-0" style="font-size: 1.2rem;">Aspiring Software Engineer &amp; ML Enthusiast</p>
+  </div>
+
+  <section id="about">
+    <div class="container about-content">
+      <div>
+        <p>
+          Kamusta ka! I'm Mikkael Dumancas, a Computer Science undergraduate graduating in December 2025. I'm passionate about machine learning, networking, and software engineering.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Google Dino Run RL Agent</h3>
+          <p>An agent that learns to play the Google Chrome Dino Run game using reinforcement learning.</p>
+          <p class="tech-stack">Python, Gymnasium, PyTorch</p>
+          <a href="https://github.com/oph4lia/Google-Dino-Run-RL-Agent" class="btn" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Full Stack Retail Website</h3>
+          <p>A simple online retail website with product listings, shopping cart, and checkout features.</p>
+          <p class="tech-stack">HTML, CSS, JavaScript, Flask, MS SQL</p>
+          <a href="https://github.com/oph4lia/Venus" class="btn" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="container">
+      <h2>Resume</h2>
+      <!-- Removed the Download Resume (PDF) button -->
+      <!-- Preview of the resume using Google Drive embed -->
+      <!-- This shows a preview of the PDF below the download button -->
+      <div style="display: flex; justify-content: center; margin: 32px 0;">
+        <iframe 
+          src="https://drive.google.com/file/d/1T43_lJR1LQeqHUkB9YW5RR9JT0aAkHsL/preview" 
+          width="480" 
+          height="600" 
+          allow="autoplay"
+          style="border: 2px solid #FFD700; border-radius: 8px; background: #fff;">
+        </iframe>
+      </div>
+      <div class="key-skills-section">
+        <h2>Key Skills</h2>
+        <!-- Skills section using cards in 3 columns -->
+        <div class="row justify-content-center">
+          <!-- Languages Card -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="card skill-card text-center">
+              <div class="card-body p-3">
+                <h4 class="card-title" style="color: #FFD700;">Languages</h4>
+                <ul class="list-unstyled mb-0">
+                  <li>Java</li>
+                  <li>Python</li>
+                  <li>C++</li>
+                  <li>C</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- AI/ML Card -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="card skill-card text-center">
+              <div class="card-body p-3">
+                <h4 class="card-title" style="color: #FFD700;">AI/ML</h4>
+                <ul class="list-unstyled mb-0">
+                  <li>PyTorch</li>
+                  <li>Stable-Baselines3</li>
+                  <li>NumPy</li>
+                  <li>MatPlotLib</li>
+                  <li>OpenCV</li>
+                  <li>Gymnasium</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Web Development Card -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="card skill-card text-center">
+              <div class="card-body p-3">
+                <h4 class="card-title" style="color: #FFD700;">Web Development</h4>
+                <ul class="list-unstyled mb-0">
+                  <li>SQL</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>React</li>
+                  <li>Flutter</li>
+                  <li>Flask</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="container about-content">
+      <h2>Personal Interests</h2>
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-3 mb-3">
+          <div class="card interest-card text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version_%28cropped%29.png"
+                 class="card-img-top mx-auto d-block interest-img" alt="Valorant">
+            <div class="card-body p-2">
+              <p class="card-text mb-1">Valorant</p>
+              <div class="interest-desc hover-reveal">
+                I like playing competitive with friends! I am currently ascendant 1 and trying to learn controller agents.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <div class="card interest-card text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/8ball.jpg"
+                 class="card-img-top mx-auto d-block interest-img" alt="Pool">
+            <div class="card-body p-2">
+              <p class="card-text mb-1">Pool</p>
+              <div class="interest-desc hover-reveal">
+                I love playing pool because it helps me relax and focus. It's a fun way to spend time with friends. I mainly play 8-ball and 9-ball.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <div class="card interest-card text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/MyAnimeList_Logo.png"
+                 class="card-img-top mx-auto d-block interest-img" alt="Anime">
+            <div class="card-body p-2">
+              <p class="card-text mb-1">Anime</p>
+              <div class="interest-desc hover-reveal">
+                My favorite anime is Your Lie in April. I played classical music in my childhood and the story resonates with me.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-3">
+          <div class="card interest-card text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Dumbbell-lateral-raises-2.png"
+                 class="card-img-top mx-auto d-block interest-img" alt="Fitness">
+            <div class="card-body p-2">
+              <p class="card-text mb-1">Fitness</p>
+              <div class="interest-desc hover-reveal">
+                I am not a pro bodybuilder, but I enjoy pushing myself and seeing progress. I am currently trying to get better at dieting and nutrition!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <!-- The form will open the user's email client with the message -->
+      <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Smoothly hide/show the hero card when scrolling -->
+  <script>
+    // This script smoothly hides the hero card when you scroll down, and shows it when at the top
+    document.addEventListener('DOMContentLoaded', function() {
+      var heroCard = document.getElementById('heroCard');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 150) {
+          heroCard.classList.add('hide-hero');
+        } else {
+          heroCard.classList.remove('hide-hero');
+        }
+      });
+
+      // Make the contact form open the user's email client
+      var contactForm = document.getElementById('contactForm');
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Get form values
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        // Create the mailto link
+        var mailto = 'mailto:mikkaeldumancas@gmail.com'
+          + '?subject=' + encodeURIComponent('Contact from ' + name)
+          + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
+
+        // Open the user's email client
+        window.location.href = mailto;
+      });
+    });
+  </script>
 </body>
 </html>
